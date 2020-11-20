@@ -11,16 +11,16 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    @RequestMapping("/user")
-    public String showUserList(Model model) {
+    @RequestMapping("/branch-example")
+    public String branchExample(Model model) {
         List<user> userList = new ArrayList<>();
-        userList.add(new user(0, "Ken", "American"));
-        userList.add(new user(1, "James", "English"));
-        userList.add(new user(2, "Bob", "France"));
-        userList.add(new user(3, "Andy", "Russia"));
+        userList.add(new user(0, "Ken", "American", 1));
+        userList.add(new user(1, "James", "English", 2));
+        userList.add(new user(2, "Bob", "France", 0));
+        userList.add(new user(3, "Andy", "Russia", 1));
 
-        model.addAttribute("userList", userList);
-        return "thymeleaf-variable-example";
+        model.addAttribute("users", userList);
+        return "branch-example";
     }
 
 }

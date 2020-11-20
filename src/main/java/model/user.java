@@ -4,14 +4,16 @@ public class user {
     private int id;
     private String name;
     private String address;
+    private int role;
 
     public user() {
     }
 
-    public user(int id, String name, String address) {
+    public user(int id, String name, String address, int role) {
         this.id = id;
         this.name = name;
         this.address = address;
+        this.role = role;
     }
 
     public int getId() {
@@ -36,5 +38,13 @@ public class user {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
     }
 }
